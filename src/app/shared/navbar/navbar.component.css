@@ -1,0 +1,12 @@
+.header {
+  background: url(../../../assets/img/food-wallpaper.jpg) no-repeat center;
+  background-size: cover; /*Adaptacion al contenedor 100% de la pantalla */
+  min-height: 100vh; /*Usar todo el alto de la pantalla*/
+  font-weight: 900;
+  font-size: large;
+  padding-top: 0;
+}
+
+.header .navbar{
+  background-color: transparent !important; /* establece transparent por sobre cualquier otro valor*/
+}
