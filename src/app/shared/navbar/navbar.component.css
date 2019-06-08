@@ -7,6 +7,16 @@
   padding-top: 0;
 }
 
+#titulo{
+  margin-left:120px;
+}
+
+#elementosDerecha{
+  margin-right: 120px;
+}
+
 .header .navbar{
   background-color: transparent !important; /* establece transparent por sobre cualquier otro valor*/
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
