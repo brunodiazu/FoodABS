@@ -9,6 +9,9 @@
 }
 
 .fondo3{
+  background: url(../../assets/img/imagenComidaFondo2.jpg) no-repeat center;
+  background-size: cover; /*Adaptacion al contenedor 100% de la pantalla */
+  min-height: 100vh; /*Usar todo el alto de la pantalla*/
   height: 700px;
 }
 
