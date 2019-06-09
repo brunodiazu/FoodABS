@@ -1,14 +1,25 @@
 .fondo1{
   height: 400px;
   background: salmon;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .fondo2{
   height: 400px;
   background: pink;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .fondo3{
   height: 400px;
   background: lightpink;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#imagenFondo1 {
+  margin-top: 30px;
+  margin-left: 60px;
 }
