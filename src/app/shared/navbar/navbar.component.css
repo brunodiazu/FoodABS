@@ -7,6 +7,12 @@
   padding-top: 0;
 }
 
+.header .navbar{
+  background-color: transparent; /* establece transparent por sobre cualquier otro valor*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #titulo{
   margin-left:120px;
 }
@@ -15,8 +21,19 @@
   margin-right: 120px;
 }
 
-.header .navbar{
-  background-color: transparent !important; /* establece transparent por sobre cualquier otro valor*/
-  padding-top: 20px;
-  padding-bottom: 20px;
+.navbar_withscroll{
+  transition: all 1000ms;
+  /*animation: scaleEffect 0.3s ease-in; */
+}
+
+.navbar_transparent{
+  background-color: transparent;
+  transition: all 1000ms;
+  text-decoration-color: red;
+  /* animation: scaleEffect 0.3s ease-out; */
+}
+
+
+li:hover{
+  background: #FF5722;
 }

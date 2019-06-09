@@ -10,8 +10,8 @@ import { FoodapiComponent } from './foodapi/foodapi.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 
-/* Jquery para las animaciones de scroll y otros*/
-import * as $ from 'jquery';
+/* Import third-party modules*/
+
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import * as $ from 'jquery';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
