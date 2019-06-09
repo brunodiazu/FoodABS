@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FoodapiComponent } from './foodapi/foodapi.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
+import { IntroComponent } from './intro/intro.component';
 
 /* Import third-party modules*/
 
@@ -21,7 +22,8 @@ import { SignupComponent } from './signup/signup.component';
     HomeComponent,
     FoodapiComponent,
     ProfileComponent,
-    SignupComponent
+    SignupComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
