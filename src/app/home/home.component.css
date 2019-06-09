@@ -1,15 +1,44 @@
+.titulo{
+  position:absolute;
+  top: 40%;
+  right: 30%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 150px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 3px 5px 2px #474747;
+  color: #FFFFFF;
+}
+
+.subtitulo{
+  position:absolute;
+  top: 65%;
+  right: 22%;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-align: center;
+  color: #f44336;
+}
+
 .fondo1{
   height: 700px;
   background: #212121;
 }
 
 .fondo2{
+  padding-top: 99px;
   height: 700px;
   background: #d7ccc8;
 }
 
 .fondo3{
   height: 700px;
+  background: #fff3e0;
 }
 
 #imagenFondo1 {
