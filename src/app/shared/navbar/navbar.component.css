@@ -1,0 +1,39 @@
+.header {
+  background: url(../../../assets/img/food-wallpaper.jpg) no-repeat center;
+  background-size: cover; /*Adaptacion al contenedor 100% de la pantalla */
+  min-height: 100vh; /*Usar todo el alto de la pantalla*/
+  font-weight: 900;
+  font-size: large;
+  padding-top: 0;
+}
+
+.header .navbar{
+  background-color: transparent; /* establece transparent por sobre cualquier otro valor*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#titulo{
+  margin-left:120px;
+}
+
+#elementosDerecha{
+  margin-right: 120px;
+}
+
+.navbar_withscroll{
+  transition: all 1000ms;
+  /*animation: scaleEffect 0.3s ease-in; */
+}
+
+.navbar_transparent{
+  background-color: transparent;
+  transition: all 1000ms;
+  text-decoration-color: red;
+  /* animation: scaleEffect 0.3s ease-out; */
+}
+
+
+li:hover{
+  background: #FF5722;
+}
