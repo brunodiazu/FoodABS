@@ -13,10 +13,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
-    this.navBarScrollAnimation()
+    this.navBarScrollAnimation();
   }
 
-  navBarScrollAnimation(){
+  navBarScrollAnimation() {
     $(document).ready( () => {
       const div = $('nav');
       $(window).scroll( () => {
@@ -33,13 +33,13 @@ export class AppComponent implements OnInit {
             // div.addClass("default-color");
 
             $('#titulo').text('');
-            div.removeClass('navbar_withscroll')
-            div.addClass('navbar_transparent')
-            div.css('backgroundColor','transparent');
+            div.removeClass('navbar_withscroll');
+            div.addClass('navbar_transparent');
+            div.css('backgroundColor', 'transparent');
             // div.css('transform','scale(1.2)')
             // div.animate({fontSize: '1.2em'}, "fast");
         }
       });
-    })
+    });
   }
 }

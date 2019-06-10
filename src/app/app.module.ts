@@ -12,6 +12,16 @@ import { SignupComponent } from './signup/signup.component';
 import { IntroComponent } from './intro/intro.component';
 
 /* Import third-party modules*/
+import { DropzoneModule } from 'ngx-dropzone-wrapper';
+import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
+import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
+
+const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
+ // Change this to your upload POST address:
+  url: 'http://ingweb.duckdns.org:5000/uploader',
+  maxFilesize: 50,
+  acceptedFiles: 'image/*'
+};
 
 
 @NgModule({
@@ -28,9 +38,14 @@ import { IntroComponent } from './intro/intro.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    DropzoneModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: DROPZONE_CONFIG,
+      useValue: DEFAULT_DROPZONE_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
