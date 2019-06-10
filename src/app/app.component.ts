@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
             // div.removeClass("default-color");
             div.removeClass('navbar_transparent');
             div.addClass('navbar_withscroll');
-            div.css('backgroundColor', 'yellow');
+            div.css('backgroundColor', 'white');
             // div.css('transform','scale(1.0)')
             // div.css('transition','background 500ms');
             // div.animate({fontSize: '1.0em'}, "fast");

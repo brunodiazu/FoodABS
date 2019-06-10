@@ -13,12 +13,15 @@
   padding-bottom: 20px;
 }
 
+
+
 #titulo{
   margin-left:120px;
 }
 
 #elementosDerecha{
   margin-right: 120px;
+  color: #43464B;
 }
 
 .navbar_withscroll{
