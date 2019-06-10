@@ -2,7 +2,7 @@
 
 ## Third-Party Libraries
 
-- https://github.com/abhazelton/animate-on-scroll
+- https://michalsnik.github.io/aos/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
