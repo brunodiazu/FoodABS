@@ -13,10 +13,12 @@
   padding-bottom: 20px;
 }
 
-
-
 #titulo{
   margin-left:120px;
+  color: black;
+  font-weight: 900;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 40px;
 }
 
 #elementosDerecha{

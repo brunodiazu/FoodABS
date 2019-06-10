@@ -23,12 +23,14 @@ export class AppComponent implements OnInit {
             div.removeClass('navbar_transparent');
             div.addClass('navbar_withscroll');
             div.css('backgroundColor', 'white');
+            $('#titulo').text('FoodABS');
             // div.css('transform','scale(1.0)')
             // div.css('transition','background 500ms');
             // div.animate({fontSize: '1.0em'}, "fast");
         } else {
             // div.addClass("default-color");
 
+            $('#titulo').text('');
             div.removeClass('navbar_withscroll')
             div.addClass('navbar_transparent')
             div.css('backgroundColor','transparent');
