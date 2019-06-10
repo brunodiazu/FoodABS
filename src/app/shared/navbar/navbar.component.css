@@ -11,6 +11,7 @@
   background-color: transparent; /* establece transparent por sobre cualquier otro valor*/
   padding-top: 20px;
   padding-bottom: 20px;
+  box-shadow: none;
 }
 
 #titulo{
