@@ -38,7 +38,12 @@
 
 .fondo3{
   height: 700px;
+  text-align: center;
   background: #212121;
+}
+
+.centrar{
+  padding-top: 100px;
 }
 
 .fondo4{
