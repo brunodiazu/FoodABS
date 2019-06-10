@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'FoodABS';
 
   ngOnInit(): void {
+    AOS.init();
     this.navBarScrollAnimation()
   }
 
