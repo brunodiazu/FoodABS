@@ -47,7 +47,7 @@
 }
 
 .fondo4{
-  background: url(../../assets/img/imagenComidaFondo2.jpg) no-repeat center;
+  background: url(../../assets/img/imagenComidaFondo2.png) no-repeat center;
   background-size: cover; /*Adaptacion al contenedor 100% de la pantalla */
   min-height: 100vh; /*Usar todo el alto de la pantalla*/
   height: 300px;
@@ -67,5 +67,5 @@
 
 #imagenFondo1 {
   margin-top: 200px;
-  margin-left: 200px;
+  margin-left: 80px;
 }

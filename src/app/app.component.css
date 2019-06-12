@@ -6,3 +6,9 @@
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
+#loginIcon:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
