@@ -16,6 +16,10 @@ import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 
+import { environment } from '../environments/environment'
+import { AngularFireModule } from '@angular/fire'
+import { AngularFireDatabaseModule} from '@angular/fire/database'
+
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
  // Change this to your upload POST address:
   url: 'http://ingweb.duckdns.org:5000/uploader',
@@ -38,7 +42,9 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DropzoneModule
+    DropzoneModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [
     {
