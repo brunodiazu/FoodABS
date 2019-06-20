@@ -18,7 +18,8 @@ import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 
 import { environment } from '../environments/environment'
 import { AngularFireModule } from '@angular/fire'
-import { AngularFireDatabaseModule} from '@angular/fire/database'
+import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { LoginComponent } from './login/login.component'
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
  // Change this to your upload POST address:
@@ -37,7 +38,8 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     FoodapiComponent,
     ProfileComponent,
     SignupComponent,
-    IntroComponent
+    IntroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
