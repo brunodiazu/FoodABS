@@ -13,6 +13,13 @@
   color: #FFFFFF;
 }
 
+.fondologo{
+  height: 100vh;
+  background: url('../../assets/img/food-wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .subtitulo{
   position:absolute;
   top: 65%;

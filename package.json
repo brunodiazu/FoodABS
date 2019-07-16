@@ -23,7 +23,7 @@
     "@types/jquery": "^2.0.47",
     "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
-    "firebase": "^6.2.0",
+    "firebase": "^6.3.0",
     "jquery": "^3.4.1",
     "ngx-dropzone-wrapper": "^7.2.1",
     "rxjs": "~6.4.0",

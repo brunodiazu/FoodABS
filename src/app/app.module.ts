@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from  '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,16 +11,20 @@ import { FoodapiComponent } from './foodapi/foodapi.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { IntroComponent } from './intro/intro.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 /* Import third-party modules*/
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 
-import { environment } from '../environments/environment'
-import { AngularFireModule } from '@angular/fire'
-import { AngularFireDatabaseModule} from '@angular/fire/database';
-import { LoginComponent } from './login/login.component'
+import { AuthService } from './services/auth.service';
+import { environment } from '../environments/environment';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { Page404Component } from './page404/page404.component';
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
  // Change this to your upload POST address:
@@ -39,16 +44,20 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     ProfileComponent,
     SignupComponent,
     IntroComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    Page404Component
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     DropzoneModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [
+    AuthService,
     {
       provide: DROPZONE_CONFIG,
       useValue: DEFAULT_DROPZONE_CONFIG

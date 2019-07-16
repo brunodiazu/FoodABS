@@ -1,15 +1,15 @@
 <div class="container loginForm">
   <!-- Default form login -->
-  <form class="text-center p-5">
+  <form (submit) = "onSubmitLogin()" class="text-center p-5">
 
-      
+
     <a name='login'><p class="h4 mb-4">Inicia Sesion</p></a>
 
       <!-- Email -->
-      <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+      <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
 
       <!-- Password -->
-      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+      <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
       <div class="d-flex justify-content-around">
           <div>
@@ -30,7 +30,7 @@
 
       <!-- Register -->
       <p>No eres miembro?
-          <a href="">Registrate!</a>
+          <a href="#" [routerLink]="['user/register']" routerLinkActive="router-link-active">Registrate!</a>
       </p>
 
       <!-- Social login -->
