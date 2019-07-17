@@ -58,6 +58,7 @@ export class AuthService {
   private createUserGoogle(userData: firebase.auth.UserCredential) {
     this.user.email = userData.user.email;
     this.user.displayName = userData.user.displayName;
+    console.log(userData.user.displayName);
   }
 
   addToDataBase(userData: firebase.auth.UserCredential) {

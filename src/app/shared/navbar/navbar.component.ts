@@ -11,14 +11,21 @@ export class NavbarComponent implements OnInit {
 
   public isLogged: boolean;
 
+  public displayName: string;
+
   constructor(
     public afAuth: AuthService
   ) {
     this.isLogged = false;
+    this.displayName = '';
   }
 
   ngOnInit() {
     this.getCurrentUser();
+  }
+
+  onLogout() {
+    this.afAuth.logOut();
   }
 
   getCurrentUser() {
@@ -26,8 +33,8 @@ export class NavbarComponent implements OnInit {
       if ( auth ) {
         console.log('Usuario logeado');
         this.isLogged = true;
-      }
-      else {
+        this.displayName = this.afAuth.user.displayName;
+      } else {
         console.log('Usuario no logeado');
         this.isLogged = false;
       }

@@ -32,9 +32,13 @@ export class ProfileComponent implements OnInit {
     photoURL: ''
   };
 
-  ngOnInit() {
-    this.sideBar();
+  staticNavBar() {
+    $('nav').removeClass('fixed-top');
+    $('footer').addClass('fixed-bottom');
+  }
 
+  ngOnInit() {
+    this.staticNavBar();
     this.authService.isAuth().subscribe( (user) => {
       if (user) {
         this.user.firstName = user.displayName;
@@ -42,39 +46,6 @@ export class ProfileComponent implements OnInit {
         this.user.photoURL = user.photoURL;
         this.user.displayName = user.displayName;
       }
-    });
-  }
-
-
-
-  sideBar() {
-    $(".sidebar-dropdown > a").click(function() {
-      $(".sidebar-submenu").slideUp(200);
-      if (
-        $(this)
-          .parent()
-          .hasClass("active")
-      ) {
-        $(".sidebar-dropdown").removeClass("active");
-        $(this)
-          .parent()
-          .removeClass("active");
-      } else {
-        $(".sidebar-dropdown").removeClass("active");
-        $(this)
-          .next(".sidebar-submenu")
-          .slideDown(200);
-        $(this)
-          .parent()
-          .addClass("active");
-      }
-    });
-
-    $("#close-sidebar").click(function() {
-      $(".page-wrapper").removeClass("toggled");
-    });
-    $("#show-sidebar").click(function() {
-      $(".page-wrapper").addClass("toggled");
     });
   }
 

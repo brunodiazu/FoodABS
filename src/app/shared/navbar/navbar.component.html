@@ -2,6 +2,7 @@
   <!--Navbar -->
   <nav class="mb-1 fixed-top navbar .scrolling-navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#" id="titulo"></a>
+    <a class="navbar-brand" href="#" id="nombreUser" class="nombreUser" *ngIf="isLogged" >Bienvenido, {{displayName}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
       aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -26,7 +27,12 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#" style="color: black">Scan Image</a>
-          </li>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLogged" (click)="onLogout()" href="#" style="color: black">LogOut</a>
+      </li>
+
       </ul>
     </div>
   </nav>
