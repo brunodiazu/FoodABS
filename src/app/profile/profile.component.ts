@@ -27,19 +27,20 @@ export class ProfileComponent implements OnInit {
   user: UserInterface = {
     firstName: '',
     lastName: '',
+    displayName: '',
     email: '',
     photoURL: ''
   };
 
   ngOnInit() {
     this.sideBar();
-    this.name = "YOUR_NAME";
 
     this.authService.isAuth().subscribe( (user) => {
       if (user) {
         this.user.firstName = user.displayName;
         this.user.email = user.email;
         this.user.photoURL = user.photoURL;
+        this.user.displayName = user.displayName;
       }
     });
   }

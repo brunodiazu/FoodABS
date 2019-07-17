@@ -35,10 +35,6 @@ export class AuthService {
     return this.afAuth.authState.pipe(map(auth => auth));
   }
 
-  getAuth() {
-    return this.afAuth.authState.pipe(map (auth => { auth }));
-  }
-
   registerUser(firstName: string, lastName: string, email: string, pass: string) {
     return new Promise((resolve, reject) => {
       this.afAuth.auth.createUserWithEmailAndPassword(email, pass)
