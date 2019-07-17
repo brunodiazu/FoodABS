@@ -13,6 +13,7 @@ import { SignupComponent } from './signup/signup.component';
 import { IntroComponent } from './intro/intro.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { Page404Component } from './page404/page404.component';
 
 /* Import third-party modules*/
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
@@ -24,7 +25,9 @@ import { environment } from '../environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { Page404Component } from './page404/page404.component';
+
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
  // Change this to your upload POST address:
@@ -53,8 +56,9 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     BrowserModule,
     AppRoutingModule,
     DropzoneModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireDatabaseModule
   ],
   providers: [
     AuthService,

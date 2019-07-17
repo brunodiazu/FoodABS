@@ -1,4 +1,4 @@
-<div class="container loginForm">
+<div class="container loginForm" data-aos="zoom-in">
   <!-- Default form login -->
   <form (submit) = "onSubmitLogin()" class="text-center p-5">
 
@@ -6,10 +6,10 @@
     <a name='login'><p class="h4 mb-4">Inicia Sesion</p></a>
 
       <!-- Email -->
-      <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+      <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" data-aos="fade-right" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
 
       <!-- Password -->
-      <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+      <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" data-aos="fade-left" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
       <div class="d-flex justify-content-around">
           <div>
@@ -26,7 +26,7 @@
       </div>
 
       <!-- Sign in button -->
-      <button class="btn btn-info btn-block my-4" type="submit">Inicia Sesion</button>
+      <button class="btn btn-info btn-block my-4" type="submit" data-aos="flip-right">Inicia Sesion</button>
 
       <!-- Register -->
       <p>No eres miembro?
@@ -36,14 +36,16 @@
       <!-- Social login -->
       <p>o registrate con:</p>
 
-      <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+      <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f" data-aos="zoom-in"></i></a>
 
-      <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+      <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter" data-aos="zoom-in"></i></a>
 
-      <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+      <a class="px-2 fa-lg li-ic"><i class="fab fa-google-plus-g" (click)="onGoogleLogin()" data-aos="zoom-in"></i></a>
 
-      <a class="px-2 fa-lg fb-ic"><i class="fab fa-github"></i></a>
+      <a class="px-2 fa-lg fb-ic"><i class="fab fa-github" data-aos="zoom-in"></i></a>
 
   </form>
 <!-- Default form login -->
+<br>
+<br>
 </div>

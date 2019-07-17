@@ -13,10 +13,12 @@ export class RegisterComponent implements OnInit {
 
   public email: string;
   public password: string;
+  public firstName: string;
+  public lastName: string;
 
   constructor(
-    public authService : AuthService,
-    public router : Router
+    public authService: AuthService,
+    public router: Router
   ) { }
 
   ngOnInit() {
@@ -25,7 +27,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmitAddUser() {
-    this.authService.registerUser(this.email, this.password)
+    this.authService.registerUser(this.firstName, this.lastName, this.email, this.password)
     .then( (res) => {
       this.router.navigate(['user/profile'])
 
