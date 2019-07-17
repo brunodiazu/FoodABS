@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AuthService } from '../services/auth.service';
-
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,16 +21,26 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
 
-    $('.header').removeClass("header").addClass("header-pro");
+    $('.header').removeClass('header').addClass('header-pro');
   }
 
   onSubmitAddUser() {
     this.authService.registerUser(this.firstName, this.lastName, this.email, this.password)
     .then( (res) => {
-      this.router.navigate(['user/profile'])
+      this.router.navigate(['user/profile']);
 
     }).catch( (err) => {
       console.log(err);
+    });
+  }
+
+  onGoogleRegister() {
+    this.authService.loginGoogleUser()
+    .then( (res) => {
+      this.router.navigate(['user/profile']);
+    }).catch( (err) => {
+      console.log(err);
+      this.router.navigate(['user/login']);
     });
   }
 }
