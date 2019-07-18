@@ -28,7 +28,9 @@ export class AuthService {
     lastName : '',
     email : '',
     photoURL : '',
-    displayName : ''
+    displayName : '',
+    altura : -1,
+    edad : -1
   };
 
   isAuth() {

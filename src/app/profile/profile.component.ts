@@ -29,7 +29,9 @@ export class ProfileComponent implements OnInit {
     lastName: '',
     displayName: '',
     email: '',
-    photoURL: ''
+    photoURL: '',
+    altura: -1,
+    edad: -1
   };
 
   staticNavBar() {

@@ -4,5 +4,7 @@ export interface UserInterface {
   lastName?: string;
   displayName?: string,
   email?: string;
+  edad?: number;
+  altura?: number;
   photoURL?: string;
 }

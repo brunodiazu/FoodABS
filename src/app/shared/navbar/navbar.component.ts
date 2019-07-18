@@ -28,6 +28,14 @@ export class NavbarComponent implements OnInit {
     this.afAuth.logOut();
   }
 
+  onLogin() {
+
+  }
+
+  onFoodApi() {
+
+  }
+
   getCurrentUser() {
     this.afAuth.isAuth().subscribe( auth => {
       if ( auth ) {

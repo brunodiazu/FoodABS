@@ -6,3 +6,11 @@
     border-radius: 10%;
     padding-top: 1px;
   }
+
+.blocktext {
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto
+}
+

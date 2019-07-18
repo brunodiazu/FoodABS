@@ -11,27 +11,35 @@
       <ul class="navbar-nav mr-auto">
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons" id="elementosDerecha">
-        <li class="nav-item">
+        <li *ngIf="isLogged == false" class="nav-item">
           <a class="nav-link waves-effect waves-light" href="https://www.instagram.com/food.abs/">
             <i class="fab fa-instagram" style="color: black"></i>
           </a>
         </li>
-        <li class="nav-item">
+        <li *ngIf="isLogged == false" class="nav-item">
           <a class="nav-link waves-effect waves-light" href= "https://github.com/brunodiazu/FoodABS">
             <i class="fab fa-github" style="color: black"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" style="color: black">
-            <i class="fas fa-book"></i> FoodAPI</a>
+          <a [routerLink]="['foodapi']" routerLinkActive="router-link-active" href="#" class="nav-link" *ngIf="isLogged == false" style="color: black">
+            <i class="fas fa-book" ></i> FoodAPI</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" style="color: black">Scan Image</a>
+            <a class="nav-link" *ngIf="isLogged == true" href="#" style="color: black"> <i class="fas fa-hamburger"></i>Scan Image</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" *ngIf="isLogged" (click)="onLogout()" href="#" style="color: black">LogOut</a>
-      </li>
+            <a class="nav-link" *ngIf="isLogged == true" href="#" style="color: black"> <i class="fas fa-user"></i>Profile</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="isLogged == false" (click)="onLogin()" href="#login" style="color: black"><i class="fas fa-user"></i>Login</a>
+          </li>
+
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLogged == true" (click)="onLogout()" href="#" style="color: black"> <i class="fas fa-sign-out-alt"></i>Logout</a>
+        </li>
 
       </ul>
     </div>

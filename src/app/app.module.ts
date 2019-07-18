@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from  '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { FoodapiComponent } from './foodapi/foodapi.component';
+import { FoodApiComponent } from './foodapi/foodapi.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { IntroComponent } from './intro/intro.component';
@@ -29,6 +29,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireDatabase } from '@angular/fire/database';
 
+/* DROPZONE CONFIGURATION */
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
  // Change this to your upload POST address:
   url: 'http://ingweb.duckdns.org:5000/uploader',
@@ -43,7 +44,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    FoodapiComponent,
+    FoodApiComponent,
     ProfileComponent,
     SignupComponent,
     IntroComponent,
