@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
     private authService: AuthService
   ) { }
 
-  user: UserInterface = {
+  public user: UserInterface = {
     firstName: '',
     lastName: '',
     displayName: '',
