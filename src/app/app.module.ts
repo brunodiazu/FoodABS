@@ -50,7 +50,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     IntroComponent,
     LoginComponent,
     RegisterComponent,
-    Page404Component,
+    Page404Component
   ],
   imports: [
     FormsModule,

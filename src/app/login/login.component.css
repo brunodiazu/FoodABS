@@ -1,16 +1,9 @@
 .loginForm {
-    width: 500px;
-    height: 590px;
-    background-color: #FFFFFF;
+    background-color: transparent;
+    color: white;
     opacity: 0.9;
     border-radius: 10%;
-    padding-top: 1px;
+    padding-bottom: 20;
   }
 
-.blocktext {
-  display: block;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto
-}
 
