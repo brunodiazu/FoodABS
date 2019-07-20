@@ -23,7 +23,8 @@ export class AuthService {
     public afDatabase: AngularFireDatabase
   ) {}
 
-  user: UserInterface = {
+  public user: UserInterface = {
+    id : '',
     firstName : '',
     lastName : '',
     email : '',
@@ -50,6 +51,7 @@ export class AuthService {
   }
 
   private createUser(userData: firebase.auth.UserCredential, firstName: string, lastName: string) {
+    this.user.id = userData.user.uid;
     this.user.email = userData.user.email;
     this.user.firstName = firstName;
     this.user.lastName = lastName;
@@ -58,6 +60,7 @@ export class AuthService {
   }
 
   private createUserGoogle(userData: firebase.auth.UserCredential) {
+    this.user.id = userData.user.uid;
     this.user.email = userData.user.email;
     this.user.displayName = userData.user.displayName;
     console.log(userData.user.displayName);

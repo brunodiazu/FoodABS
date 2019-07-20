@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from '../../services/auth.service';
+import { DatabaseService } from '../../services/database.service';
 
 /* DROPZONE */
 import { DropzoneComponent ,
@@ -31,7 +32,8 @@ export class NavbarComponent implements OnInit {
   };
 
   constructor(
-    public afAuth: AuthService
+    public afAuth: AuthService,
+    public afDatabase: DatabaseService
   ) {
     this.isLogged = false;
     this.displayName = '';
@@ -67,6 +69,12 @@ export class NavbarComponent implements OnInit {
   }
 
   onUploadError(args: any) {
+
+  }
+
+  /* Boton de confirmar presionado por el usuario */
+  /* Enviar foto y respuesta a la base de datos */
+  onConfirm() {
 
   }
 
