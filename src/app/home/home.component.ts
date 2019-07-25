@@ -82,6 +82,7 @@ export class HomeComponent implements OnInit {
   onUploadSuccess(args: any) {
     /* Si el archivo se subió correctamente, el servidor envia un JSON*/
     /* El JSON del servidor, se encuentra como segundo argumento de args (partiendo de cero) */
+    console.log(args);
     console.log(args[1]);
     if (args[1] != null) {
       if (args[1].food_predict != null) {

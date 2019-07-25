@@ -27,7 +27,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireStorageModule} from '@angular/fire/storage';
 
 /* DROPZONE CONFIGURATION */
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
@@ -59,7 +59,8 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     DropzoneModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   providers: [
     AuthService,

@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 
-/* RJ */
-import { map } from 'rxjs/operators';
-
 import { AngularFireDatabase } from '@angular/fire/database';
-import * as firebase from 'firebase/app';
-
-import { AuthService } from '../services/auth.service';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +9,19 @@ import { AuthService } from '../services/auth.service';
 export class DatabaseService {
 
   constructor(
-    public afAuth: AuthService,
-    public afDataBase: AngularFireDatabase
+    private afDatabase: AngularFireDatabase
   ) { }
 
+  uploadUser(id: string, user: object) {
+    this.afDatabase.database.ref('users/' + id).set(user);
+  }
 
+  uploadFood(id: string, filePath: string) {
+
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    const updates = {};
+    updates['users/' + id + '/foods'] = filePath;
+
+    return this.afDatabase.database.ref().update(updates);
+  }
 }

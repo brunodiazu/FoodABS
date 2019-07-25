@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from '../../services/auth.service';
-import { DatabaseService } from '../../services/database.service';
+import { StorageService } from '../../services/storage.service';
+import { DatabaseService } from 'src/app/services/database.service';
 
 /* DROPZONE */
 import { DropzoneComponent ,
@@ -22,6 +23,8 @@ export class NavbarComponent implements OnInit {
 
   public foodDetection: string;
 
+  private currentFilePath: string;
+
   public config: DropzoneConfigInterface = {
     clickable: true,
     maxFiles: 1,
@@ -32,8 +35,9 @@ export class NavbarComponent implements OnInit {
   };
 
   constructor(
-    public afAuth: AuthService,
-    public afDatabase: DatabaseService
+    private afAuth: AuthService,
+    private afDatabase: DatabaseService,
+    private afStorage: StorageService
   ) {
     this.isLogged = false;
     this.displayName = '';
@@ -65,7 +69,7 @@ export class NavbarComponent implements OnInit {
         console.log('Usuario no logeado');
         this.isLogged = false;
       }
-    })
+    });
   }
 
   onUploadError(args: any) {
@@ -75,7 +79,9 @@ export class NavbarComponent implements OnInit {
   /* Boton de confirmar presionado por el usuario */
   /* Enviar foto y respuesta a la base de datos */
   onConfirm() {
-
+    console.log(this.afAuth.user.id);
+    console.log(this.currentFilePath);
+    this.afDatabase.uploadFood(this.afAuth.user.id, this.currentFilePath);
   }
 
   onUploadSuccess(args: any) {
@@ -86,7 +92,9 @@ export class NavbarComponent implements OnInit {
       if (args[1].food_predict != null) {
         console.log(args[1].food_predict);
         this.foodDetection = this.capitalizeOnlyFirst(args[1].food_predict);
-        $('#confirmar').removeAttr("disabled");
+        /* Send to FireStorage */
+        this.currentFilePath = this.afStorage.uploadFood(args[0]);
+        $('#confirmar').removeAttr('disabled');
       }
     }
   }
