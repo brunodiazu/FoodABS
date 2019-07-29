@@ -146,7 +146,7 @@ background: linear-gradient(to top, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Fir
   padding-right: 5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
 
     .foodabs {
       grid-column: 1/1;
