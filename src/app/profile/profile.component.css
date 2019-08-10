@@ -9,10 +9,12 @@
   margin-right: 20%;
   padding-bottom: 10%;
   grid-template-areas:  "titulo titulo titulo"
-                        "semana semana semana"
+                        "tituloSemana tituloSemana tituloSemana"
                         "tarjeta-1 tarjeta-2 tarjeta-3"
                         "vidaSana vidaSana vidaSana"
-                        "tarjeta-4 tarjeta-5 tarjeta-6";
+                        "tarjeta-4 tarjeta-5 tarjeta-6"
+                        "tituloDieta tituloDieta tituloDieta"
+                        "jumbotron jumbotron jumbotron";
 
 
 }
@@ -36,8 +38,8 @@
   padding-top: 6%;
 }
 
-.semana {
-  grid-area: semana;
+.tituloSemana {
+  grid-area: tituloSemana;
   grid-column: 1 / 2;
 }
 
@@ -66,22 +68,36 @@
   grid-area: tarjeta-6;
 }
 
+.tituloDieta {
+  grid-area: tituloDieta;
+}
+
+.jumbotron {
+  grid-area: jumbotron;
+}
+
+.graficoDieta {
+  position: relative;
+  width: 100%;
+}
 
 
 @media screen and (max-width: 768px) {
   .contenedorProfile {
     grid-template-areas:  "titulo"
-                          "semana"
+                          "tituloSemana"
                           "tarjeta-1"
                           "tarjeta-2"
                           "tarjeta-3"
                           "vidaSana"
                           "tarjeta-4"
                           "tarjeta-5"
-                          "tarjeta-6";
+                          "tarjeta-6"
+                          "tituloDieta"
+                          "jumbotron";
   }
 
-  .semana {
+  .tituloSemana {
     grid-column: 1/1;
     text-align: center;
   }

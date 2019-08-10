@@ -29,6 +29,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule} from '@angular/fire/storage';
 
+import { ChartsModule } from 'ng2-charts';
+
 /* DROPZONE CONFIGURATION */
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
  // Change this to your upload POST address:
@@ -57,6 +59,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     BrowserModule,
     AppRoutingModule,
     DropzoneModule,
+    ChartsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,

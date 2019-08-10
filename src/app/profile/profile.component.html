@@ -3,7 +3,7 @@
     <h1>Bienvenido, {{user.displayName}}</h1>
   </div>
 
-  <div class="semana">
+  <div class="Titulosemana">
     <h2>Registro Semanal</h2>
   </div>
 
@@ -70,4 +70,39 @@
       </div>
     </div>
   </div>
+
+  <!--Parte de la dieta-->
+  <div class="tituloDieta">
+    <h2>Dieta</h2>
+  </div>
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+
+      <!-- Title -->
+      <h4 class="card-title h4 pb-2"><strong>Mi Dieta</strong></h4>
+
+      <div class="graficoDieta">
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+      </div>
+
+      <h5 class="indigo-text h5 mb-4">Dieta Mensual</h5>
+
+      <p class="card-text">Valores referenciales a una dieta de 2000kcal basadas en el perfil del usuario {{user.displayName}}</p>
+
+      <!-- Linkedin -->
+      <a class="fa-lg p-2 m-2 li-ic"><i class="fab fa-linkedin-in grey-text"></i></a>
+      <!-- Twitter -->
+      <a class="fa-lg p-2 m-2 tw-ic"><i class="fab fa-twitter grey-text"></i></a>
+      <!-- Dribbble -->
+      <a class="fa-lg p-2 m-2 fb-ic"><i class="fab fa-facebook-f grey-text"></i></a>
+
+    </div>
+    <!-- Jumbotron -->
+
 </div>
