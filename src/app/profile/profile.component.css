@@ -9,6 +9,7 @@
   margin-right: 20%;
   padding-bottom: 10%;
   grid-template-areas:  "titulo titulo titulo"
+                        "TituloIntereses TituloIntereses TituloIntereses"
                         "tituloSemana tituloSemana tituloSemana"
                         "tarjeta-1 tarjeta-2 tarjeta-3"
                         "vidaSana vidaSana vidaSana"
@@ -27,7 +28,9 @@
   grid-area: titulo;
   text-align: center;
 }
-
+.TituloIntereses {
+  grid-area: TituloIntereses;
+}
 .tarjeta-1, .tarjeta-2, .tarjeta-3, .tarjeta-4, .tarjeta-5, .tarjeta-6 {
   display: flex;
   align-content: center;
@@ -128,6 +131,7 @@
 @media screen and (max-width: 768px) {
   .contenedorProfile {
     grid-template-areas:  "titulo"
+                          "TituloIntereses"
                           "tituloSemana"
                           "tarjeta-1"
                           "tarjeta-2"
@@ -141,7 +145,8 @@
                           "tituloIntereses"
                           "intereses"
                           "tituloHistorial"
-                          "historial";
+                          "historial"
+                          ;
   }
 
   .tituloSemana {
