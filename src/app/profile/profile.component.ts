@@ -19,21 +19,69 @@ export class ProfileComponent implements OnInit {
 
   public name: string;
 
-  public barChartOptions = {
+  /* Config micronutrientes chart */
+  public chart1Options = {
     scaleShowVerticalLines: false,
     responsive: true
   };
 
-  public barChartLabels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
+  public chart1Labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
 
-  public barChartType = 'bar';
+  public chart1Type = 'horizontalBar';
 
-  public barChartLegend = true;  public barChartData = [
+  public chart1Legend = true;  public chart1Data = [
     {data: [65, 59, 80, 81], label: 'Proteinas'},
     {data: [28, 48, 40, 19], label: 'Carbohidratos'},
     {data: [40, 50, 45, 10], label: 'Lipidos'}
   ];
 
+  public chart1Options2 = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  public chart1Labels2 = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
+
+  public chart1Type2 = 'polarArea';
+
+  public chart1Legend2 = true;  public chart1Data2 = [
+    {data: [65, 59, 80, 81], label: 'Proteinas'},
+    {data: [28, 48, 40, 19], label: 'Carbohidratos'},
+    {data: [40, 50, 45, 10], label: 'Lipidos'}
+  ];
+
+  /* Config macronutrientes chart */
+
+  public chart2Options = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  public chart2Labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
+
+  public chart2Type = 'pie';
+
+  public chart2Legend = true;  public chart2Data = [
+    {data: [65, 59, 80, 81], label: 'Proteinas'},
+    {data: [28, 48, 40, 19], label: 'Carbohidratos'},
+    {data: [40, 50, 45, 10], label: 'Lipidos'}
+  ];
+
+
+  public chart2Options2 = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  public chart2Labels2 = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
+
+  public chart2Type2 = 'line';
+
+  public chart2Legend2 = true;  public chart2Data2 = [
+    {data: [65, 59, 80, 81], label: 'Proteinas'},
+    {data: [28, 48, 40, 19], label: 'Carbohidratos'},
+    {data: [40, 50, 45, 10], label: 'Lipidos'}
+  ];
   constructor(
     private authService: AuthService
   ) { }

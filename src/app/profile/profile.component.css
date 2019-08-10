@@ -13,19 +13,19 @@
                         "tarjeta-1 tarjeta-2 tarjeta-3"
                         "vidaSana vidaSana vidaSana"
                         "tarjeta-4 tarjeta-5 tarjeta-6"
+                        "tituloRegistros tituloRegistros tituloRegistros"
+                        "registros registros registros"
                         "tituloDieta tituloDieta tituloDieta"
                         "jumbotron jumbotron jumbotron"
+                        "tituloIntereses tituloIntereses tituloIntereses"
+                        "intereses intereses intereses"
                         "tituloHistorial tituloHistorial tituloHistorial"
                         "historial historial historial";
-
-
 }
 
 .titulo {
   grid-area: titulo;
-
   text-align: center;
-
 }
 
 .tarjeta-1, .tarjeta-2, .tarjeta-3, .tarjeta-4, .tarjeta-5, .tarjeta-6 {
@@ -70,6 +70,14 @@
   grid-area: tarjeta-6;
 }
 
+.tituloRegistros {
+  grid-area: tituloRegistros;
+}
+
+.registros {
+  grid-area: registros;
+}
+
 .tituloDieta {
   grid-area: tituloDieta;
 }
@@ -78,15 +86,32 @@
   grid-area: jumbotron;
 }
 
+.tituloIntereses {
+  grid-area: tituloIntereses;
+}
+
+.intereses {
+  grid-area: intereses;
+  margin-bottom: 5%;
+}
+
+.intereses > .badge {
+  margin-right: 2%;
+}
+
 .historial {
   grid-area: historial;
 }
 .tituloHistorial{
   grid-area: tituloHistorial;
-  
 }
 
-.graficoDieta {
+.graficoMacronutrientes {
+  position: relative;
+  width: 100%;
+}
+
+.graficoMicronutrientes {
   position: relative;
   width: 100%;
 }
@@ -113,6 +138,8 @@
                           "tarjeta-6"
                           "tituloDieta"
                           "jumbotron"
+                          "tituloIntereses"
+                          "intereses"
                           "tituloHistorial"
                           "historial";
   }
