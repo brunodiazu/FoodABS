@@ -14,7 +14,9 @@
                         "vidaSana vidaSana vidaSana"
                         "tarjeta-4 tarjeta-5 tarjeta-6"
                         "tituloDieta tituloDieta tituloDieta"
-                        "jumbotron jumbotron jumbotron";
+                        "jumbotron jumbotron jumbotron"
+                        "tituloHistorial tituloHistorial tituloHistorial"
+                        "historial historial historial";
 
 
 }
@@ -76,9 +78,25 @@
   grid-area: jumbotron;
 }
 
+.historial {
+  grid-area: historial;
+}
+.tituloHistorial{
+  grid-area: tituloHistorial;
+  
+}
+
 .graficoDieta {
   position: relative;
   width: 100%;
+}
+
+.fa-arrow-up {
+  color: green;
+}
+
+.fa-arrow-down {
+  color: red;
 }
 
 
@@ -94,7 +112,9 @@
                           "tarjeta-5"
                           "tarjeta-6"
                           "tituloDieta"
-                          "jumbotron";
+                          "jumbotron"
+                          "tituloHistorial"
+                          "historial";
   }
 
   .tituloSemana {
@@ -107,4 +127,6 @@
     text-align: center;
     padding-top: 0;
   }
+
+
 }
