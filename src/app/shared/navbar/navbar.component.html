@@ -29,7 +29,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" *ngIf="isLogged == true" href="#" style="color: black"> <i class="fas fa-user"></i>Profile</a>
+            <a class="nav-link" *ngIf="isLogged == true" [routerLink]="['user/profile']" routerLinkActive="router-link-active"  href="#" style="color: black"> <i class="fas fa-user"></i>Profile</a>
         </li>
 
         <li class="nav-item">
