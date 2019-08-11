@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './foodapi.component.html',
   styleUrls: ['./foodapi.component.css']
 })
-export class FoodapiComponent implements OnInit {
+export class FoodApiComponent implements OnInit {
 
   constructor() { }
 

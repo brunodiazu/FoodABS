@@ -29,10 +29,33 @@
 
   <!--CDN Google Font-->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCJ2-6G2uSFED34XGQpi5wI7GXiT68ncbY",
+    authDomain: "foodabs-1b4f9.firebaseapp.com",
+    databaseURL: "https://foodabs-1b4f9.firebaseio.com",
+    projectId: "foodabs-1b4f9",
+    storageBucket: "",
+    messagingSenderId: "769854792493",
+    appId: "1:769854792493:web:0fc253076706350c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
 </body>
 
 </html>

@@ -24,11 +24,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/aos/dist/aos.css",
               "src/styles.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/chart.js/dist/Chart.min.js"
             ]
           },
           "configurations": {

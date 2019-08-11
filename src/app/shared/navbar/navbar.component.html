@@ -1,12 +1,7 @@
 <header class="header animated">
   <!--Navbar -->
-<<<<<<< HEAD
-  <nav class="mb-1 fixed-top navbar navbar-expand-lg navbar-dark">
-=======
-  <nav class="mb-1 fixed-top navbar navbar-expand-lg navbar-dark default-color">
-    <img src="assets/img/logoOff2.png">
->>>>>>> dev
-    <a class="navbar-brand" href="#" id="titulo">FoodABS</a>
+  <nav class="mb-1 fixed-top navbar .scrolling-navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#" id="titulo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
       aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -15,25 +10,62 @@
       <ul class="navbar-nav mr-auto">
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons" id="elementosDerecha">
-        <li class="nav-item">
-          <a class="nav-link waves-effect waves-light">
-            <i class="fab fa-instagram"></i>
+        <li *ngIf="isLogged == false" class="nav-item">
+          <a class="nav-link waves-effect waves-light" href="https://www.instagram.com/food.abs/">
+            <i class="fab fa-instagram" style="color: black"></i>
+          </a>
+        </li>
+        <li *ngIf="isLogged == false" class="nav-item">
+          <a class="nav-link waves-effect waves-light" href= "https://github.com/brunodiazu/FoodABS">
+            <i class="fab fa-github" style="color: black"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-effect waves-light">
-            <i class="fab fa-github"></i>
-          </a>
+          <a [routerLink]="['foodapi']" routerLinkActive="router-link-active" href="#" class="nav-link" *ngIf="isLogged == false" style="color: black">
+            <i class="fas fa-book" ></i> FoodAPI</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-book"></i> FoodAPI</a>
+            <a class="nav-link" data-toggle="modal" data-target="#basicExampleModal" *ngIf="isLogged == true" href="#" style="color: black"> <i class="fas fa-hamburger"></i>Scan Image</a>
         </li>
+
         <li class="nav-item">
-            <a class="nav-link" href="#">Scan Image</a>
+            <a class="nav-link" *ngIf="isLogged == true" [routerLink]="['user/profile']" routerLinkActive="router-link-active"  href="#" style="color: black"> <i class="fas fa-user"></i>Profile</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="isLogged == false" (click)="onLogin()" href="#login" style="color: black"><i class="fas fa-user"></i>Login</a>
           </li>
+
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLogged == true" (click)="onLogout()" href="#" style="color: black"> <i class="fas fa-sign-out-alt"></i>Logout</a>
+        </li>
+
       </ul>
     </div>
   </nav>
+
+  <!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Scan Image</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <dropzone data-aos="fade-up" [config]="config" [message]="'Click or drag images here to upload'" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
+      <h4>Comida detectada: {{foodDetection}}</h4>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      <button id = "confirmar" (click)="onConfirm()" disabled type="button" class="btn btn-primary">Confirmar</button>
+    </div>
+  </div>
+</div>
+</div>
+
   <!--/.Navbar -->
 </header>

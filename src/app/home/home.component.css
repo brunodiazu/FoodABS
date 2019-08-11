@@ -1,26 +1,187 @@
-.fondo1{
-  height: 400px;
-  background: salmon;
-  border-radius: 10px;
-  margin-top: 10px;
+.contenedor_home {
+  width: 100%;
+  max-width: 100%;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  display: grid;
+  grid-gap: 0px;
+
+  grid-template-areas:  "fondo fondo fondo"
+                        "tituloComida tituloComida tituloComida"
+                        "clasificaComida clasificaComida clasificaComida"
+                        "titulo titulo titulo"
+                        "tarjeta-1 tarjeta-2 tarjeta-3"
+                        "lorem lorem lorem"
+                        "tituloLogin tituloLogin tituloLogin"
+                        "loginUser loginUser loginUser";
+
 }
 
-.fondo2{
-  height: 400px;
-  background: pink;
-  border-radius: 10px;
-  margin-top: 10px;
+.fondo {
+   /* The image used */
+   background-image: url("../../assets/img/food-wallpaper.jpg");
+
+   /* Full height */
+   height: 100vh;
+
+   grid-area: fondo;
 }
 
-.fondo3{
-  height: 400px;
-  background: lightpink;
-  border-radius: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.foodabs {
+  grid-row: 1/1;
+  grid-column: 1/4;
+  text-align: center;
+  font-size: 1200%;
+  margin: auto;
+  font-family: 'Great Vibes', cursive;
+  font-weight: bold;
+  color: #303030;
 }
 
-#imagenFondo1 {
-  margin-top: 30px;
-  margin-left: 60px;
+.tituloComida {
+  padding-top: 3%;
+  grid-area: tituloComida;
+  text-align: center !important;
+  padding-bottom: 4%;
+}
+
+.clasificaComida {
+  grid-area : clasificaComida;
+  padding-bottom: 2%;
+
+
+}
+
+.clasificaComida > h1 {
+  padding-top: 7%;
+}
+
+.tituloLogin {
+  color: white;
+  padding-top: 4%;
+  grid-area: tituloLogin;
+  text-align: center !important;
+}
+
+.titulo {
+  padding-top: 3%;
+  grid-area: titulo;
+  text-align: center !important;
+  color:white;
+}
+
+.fondo_section {
+  grid-row: 4/7;
+  grid-column: 1/-1;
+  background-color: #303030;
+}
+
+.fondoComida {
+  grid-row: 2 / 4;
+  grid-column: 1 / -1;
+  color: white;
+  background: #f46b45;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.fondoLogin {
+  grid-row: 7 / -1;
+  grid-column: 1 / -1;
+  background: #085078;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #85D8CE, #085078);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.tarjeta-1 {
+  padding: 70px;
+
+  grid-area: tarjeta-1;
+}
+
+.tarjeta-2 {
+  padding: 70px;
+  grid-area: tarjeta-2;
+}
+
+.tarjeta-3 {
+  padding: 70px;
+
+  grid-area: tarjeta-3;
+
+}
+
+.lorem {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+
+  grid-area: lorem;
+}
+
+
+
+.loginUser {
+  grid-area: loginUser;
+  align-items: center;
+
+  padding-right: 1px;
+  padding-left: 1px;
+  padding-bottom: 10%;
+
+  font-size: 20px;
+
+  grid-column: 2 / 2;
+}
+
+.loginUser > input {
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 920px) {
+
+    .foodabs {
+      grid-column: 1/1;
+      font-size : 100px;
+    }
+
+    .loginUser {
+      grid-area : loginUser;
+    }
+
+    .contenedor_home {
+      grid-template-areas:  "fondo"
+                            "tituloComida"
+                            "clasificaComida"
+                            "titulo"
+                            "tarjeta-1"
+                            "tarjeta-2"
+                            "tarjeta-3"
+                            "lorem"
+                            "tituloLogin"
+                            "loginUser";
+    }
+
+    .fondo_section {
+      grid-row: 4/9;
+      grid-column: 1/-1;
+      background-color: #303030;
+    }
+
+    .fondoLogin {
+      grid-row: 9 / -1;
+      grid-column: 1 / -1;
+      background: #085078;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #85D8CE, #085078);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
 }

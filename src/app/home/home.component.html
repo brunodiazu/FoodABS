@@ -1,5 +1,108 @@
-<div class="container fondo1">
-    <img src="assets/img/paso1infografiapho2.png" id="imagenFondo1">
-</div>
-<div class="container fondo2"></div>
-<div class="container fondo3"></div>
+<div class="contenedor_home">
+
+    <div class="fondo"></div>
+
+    <div class="foodabs">FoodABS</div>
+
+    <div class="fondoComida"></div>
+      <div class="tituloComida">
+        <h1 style="color: white">Clasifica tu comida</h1>
+      </div>
+
+      <div class="clasificaComida">
+          <dropzone data-aos="fade-up" [config]="config" [message]="'Click or drag images here to upload'" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
+          <h1 style="text-align: center">Comida detectada: {{foodDetection}} </h1>
+      </div>
+
+      <div class="fondo_section"></div>
+
+      <div class="titulo">
+        <h1>Tecnologias</h1>
+      </div>
+
+      <div class="tarjeta-1" data-aos="fade-right">
+        <!-- Card -->
+        <div class="card">
+
+          <!-- Card image -->
+          <img class="card-img-top" src="../../assets/img/TensorFlowLogo.png" alt="Tensorflow">
+
+          <!-- Card content -->
+          <div class="card-body">
+
+            <!-- Title -->
+            <h4 class="card-title"><a>TensorFlow</a></h4>
+            <!-- Text -->
+            <p class="card-text">TensorFlow es una biblioteca de código abierto para aprendizaje automático a través de un rango de tareas, y desarrollado por Google.</p>
+            <!-- Button -->
+            <a href="https://www.tensorflow.org/" class="btn btn-primary">Leer Más</a>
+
+          </div>
+
+        </div>
+        <!-- Card -->
+      </div>
+
+      <div class="tarjeta-2" data-aos="fade-up">
+        <!-- Card -->
+      <div class="card">
+
+        <!-- Card image -->
+        <img class="card-img-top" src="../../assets/img/PythonLogo.png" alt="Python">
+
+        <!-- Card content -->
+        <div class="card-body">
+
+          <!-- Title -->
+          <h4 class="card-title"><a>Python</a></h4>
+          <!-- Text -->
+          <p class="card-text">Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en una sintaxis que favorezca un código legible.</p>
+          <!-- Button -->
+          <a href="https://www.python.org/" class="btn btn-primary">Leer Más</a>
+
+        </div>
+
+        </div>
+        <!-- Card -->
+      </div>
+
+      <div class="tarjeta-3" data-aos="fade-left">
+        <!-- Card -->
+        <div class="card">
+
+          <!-- Card image -->
+          <img class="card-img-top" src="../../assets/img/KerasLogo.png" alt="Keras">
+
+          <!-- Card content -->
+          <div class="card-body">
+
+            <!-- Title -->
+            <h4 class="card-title"><a>Keras</a></h4>
+            <!-- Text -->
+            <p class="card-text">Keras es una biblioteca de Redes Neuronales de Código Abierto. Está especialmente diseñada para posibilitar la experimentación en poco tiempo con redes de Aprendizaje Profundo.</p>
+            <!-- Button -->
+            <a href="https://keras.io/" class="btn btn-primary">Leer Más</a>
+
+          </div>
+
+        </div>
+        <!-- Card -->
+      </div>
+
+      <div class="lorem">
+        <p>
+          Y otras fuentes de información relacionadas a alimentos e informaciones varias.
+        </p>
+      </div>
+
+    <div class="fondoLogin"></div>
+      <div class="tituloLogin">
+        <h1>Unete</h1>
+      </div>
+    <div class="loginUser">
+        <app-login></app-login>
+    </div>
+
+
+
+  </div>

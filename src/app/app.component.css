@@ -1,0 +1,37 @@
+#loginIcon {
+    display:scroll;
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#loginIcon:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffff;
+  color: #000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contenedor_app {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  grid-gap: 0px;
+
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
